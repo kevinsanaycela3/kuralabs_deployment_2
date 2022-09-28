@@ -33,7 +33,7 @@ pipeline {
      stage ('deploy') {
       steps {
         sh '/var/lib/jenkins/.local/bin/eb deploy url-shortner-dev'
-        echo slacksend (message: "Finished deployment of Build #${env.BUILD_ID} on ${env.JENKINS_URL}")
+        
       } 
        
        post{
