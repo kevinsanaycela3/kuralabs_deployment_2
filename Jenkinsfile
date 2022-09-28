@@ -54,7 +54,7 @@ def custom_msg()
   def JENKINS_URL= "http://54.210.254.27:8080"
   def JOB_NAME = env.JOB_NAME
   def BUILD_ID= env.BUILD_ID
-  def JENKINS_LOG= " Job [${env.JOB_NAME}] Logs path: ${env.JOBURL}/indexing/consoleText"
+  def JENKINS_LOG= " Job [${env.JOB_NAME}] Logs path: ${env.JOB_URL}/indexing/consoleText"
   return JENKINS_LOG
 }
 
