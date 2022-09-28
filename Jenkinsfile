@@ -2,7 +2,7 @@ pipeline {
   agent any
    stages {
      
-     stage ('Build') {
+     stage ('build') {
       steps {
         sh '''#!/bin/bash
         python3 -m venv test3
@@ -32,7 +32,7 @@ pipeline {
      stage ('deploy') {
       steps {
         sh '/var/lib/jenkins/.local/bin/eb deploy url-shortner-dev'
-        echo "Running Build #${env.BUILD_ID} on ${env.JENKINS_URL}"
+        echo "Finished deploying Build #${env.BUILD_ID} on ${env.JENKINS_URL}"
       } 
        
      }    
