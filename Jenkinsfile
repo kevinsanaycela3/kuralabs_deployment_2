@@ -40,12 +40,13 @@ pipeline {
          success {
             slackSend(message: 
                       """
-                      DEPLOYMENT SUCCESSFUL
-                      ${custom_msg()}
+                      DEPLOYMENT SUCCESSFUL${custom_msg()}
                       """)
         }
          failure {
-            slackSend(message: """DEPLOYMENT FAILED ${custom_msg()}""")
+            slackSend(message: """
+            DEPLOYMENT FAILED ${custom_msg()}
+            """)
         }
        }
        
